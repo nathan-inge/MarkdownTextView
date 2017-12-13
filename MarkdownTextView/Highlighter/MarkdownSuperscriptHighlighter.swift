@@ -34,7 +34,7 @@ public final class MarkdownSuperscriptHighlighter: HighlighterType {
         var level: Int = 0
         
         enumerateMatches(type(of: self).SuperscriptRegex, string: attributedString.string) {
-            level += $0.rangeAt(1).length
+            level += $0.range(at: 1).length
             let textRange = $0.range
             let attributes = attributedString.attributes(at: textRange.location, effectiveRange: nil) 
             
@@ -59,10 +59,10 @@ public final class MarkdownSuperscriptHighlighter: HighlighterType {
 }
 
 private func superscriptAttributes(_ attributes: TextAttributes, level: Int, ratio: CGFloat) -> TextAttributes {
-    if let font = attributes[NSFontAttributeName] as? UIFont {
+    if let font = attributes[NSAttributedStringKey.font] as? UIFont {
         let adjustedFont = UIFont(descriptor: font.fontDescriptor, size: font.pointSize * ratio)
         return [
-            kCTSuperscriptAttributeName as String: level as AnyObject,
+            NSAttributedStringKey(rawValue: kCTSuperscriptAttributeName as String as String): level as AnyObject,
             NSFontAttributeName: adjustedFont
         ]
     }
