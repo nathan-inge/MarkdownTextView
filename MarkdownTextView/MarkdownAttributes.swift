@@ -14,7 +14,7 @@ import UIKit
 */
 public struct MarkdownAttributes {
     public var defaultAttributes: TextAttributes = [
-        NSAttributedStringKey.font.rawValue: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+        NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
     ]
     
     public var strongAttributes: TextAttributes?
@@ -22,27 +22,27 @@ public struct MarkdownAttributes {
     
     public struct HeaderAttributes {
         public var h1Attributes: TextAttributes? = [
-            NSAttributedStringKey.font.rawValue: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
+            NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
         ]
         
         public var h2Attributes: TextAttributes? = [
-            NSAttributedStringKey.font.rawValue: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
+            NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
         ]
         
         public var h3Attributes: TextAttributes? = [
-            NSAttributedStringKey.font.rawValue: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
+            NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
         ]
         
         public var h4Attributes: TextAttributes? = [
-            NSAttributedStringKey.font.rawValue: UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+            NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
         ]
         
         public var h5Attributes: TextAttributes? = [
-            NSAttributedStringKey.font.rawValue: UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+            NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
         ]
         
         public var h6Attributes: TextAttributes? = [
-            NSAttributedStringKey.font.rawValue: UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+            NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
         ]
         
         func attributesForHeaderLevel(_ level: Int) -> TextAttributes? {
@@ -69,33 +69,33 @@ public struct MarkdownAttributes {
     }()
     
     public var codeBlockAttributes: TextAttributes? = [
-        NSAttributedStringKey.font.rawValue: MarkdownAttributes.MonospaceFont
+        NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): MarkdownAttributes.MonospaceFont
     ]
     
     public var inlineCodeAttributes: TextAttributes? = [
-        NSAttributedStringKey.font.rawValue: MarkdownAttributes.MonospaceFont
+        NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): MarkdownAttributes.MonospaceFont
     ]
     
     public var blockQuoteAttributes: TextAttributes? = [
-        NSAttributedStringKey.foregroundColor.rawValue: UIColor.darkGray
+        NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.darkGray
     ]
     
     public var orderedListAttributes: TextAttributes? = [
-        NSAttributedStringKey.font.rawValue: fontWithTraits(.traitBold, font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body))
+        NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): fontWithTraits(.traitBold, font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body))
     ]
     
     public var orderedListItemAttributes: TextAttributes? = [
-        NSAttributedStringKey.font.rawValue: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body),
-        NSAttributedStringKey.foregroundColor.rawValue: UIColor.darkGray
+        NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont.preferredFont(forTextStyle: UIFontTextStyle.body),
+        NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.darkGray
     ]
     
     public var unorderedListAttributes: TextAttributes? = [
-        NSAttributedStringKey.font.rawValue: fontWithTraits(.traitBold, font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body))
+        NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): fontWithTraits(.traitBold, font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body))
     ]
     
     public var unorderedListItemAttributes: TextAttributes? = [
-        NSAttributedStringKey.font.rawValue: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body),
-        NSAttributedStringKey.foregroundColor.rawValue: UIColor.darkGray
+        NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont.preferredFont(forTextStyle: UIFontTextStyle.body),
+        NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.darkGray
     ]
     
     public init() {}
