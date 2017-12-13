@@ -63,7 +63,7 @@ private func superscriptAttributes(_ attributes: TextAttributes, level: Int, rat
         let adjustedFont = UIFont(descriptor: font.fontDescriptor, size: font.pointSize * ratio)
         return [
             NSAttributedStringKey(rawValue: kCTSuperscriptAttributeName as String as String): level as AnyObject,
-            NSFontAttributeName: adjustedFont
+            NSAttributedStringKey.font: adjustedFont
         ]
     }
     return [:]
